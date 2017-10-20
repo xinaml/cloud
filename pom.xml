@@ -13,6 +13,8 @@
     <modules>
         <module>common</module>
         <module>cloud-server</module>
+        <module>config-server</module>
+        <module>config-client</module>
         <module>user-provider</module>
         <module>user-consumer</module>
         <module>user-api</module>

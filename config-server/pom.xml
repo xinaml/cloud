@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.xinaml</groupId>
-	<artifactId>user-provider</artifactId>
-	<version>1.0</version>
+	<artifactId>config-server</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>user-provider</name>
-	<description>Demo project for Spring Boot</description>
+	<name>config-server</name>
+	<description>远程配置服务</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -17,7 +17,6 @@
 		<version>1.5.8.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -29,25 +28,17 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-config-server</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>com.xinaml</groupId>
-			<artifactId>user-api</artifactId>
-			<version>1.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.xinaml</groupId>
-			<artifactId>common-jpa</artifactId>
-			<version>1.0</version>
-		</dependency>
-
 	</dependencies>
 
 	<dependencyManagement>

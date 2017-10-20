@@ -8,7 +8,7 @@
 	<version>1.0</version>
 	<packaging>jar</packaging>
 	<name>cloud-server</name>
-	<description>Demo project for Spring Boot</description>
+	<description>服务注册与发现</description>
 
 
 	<parent>
