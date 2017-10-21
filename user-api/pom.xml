@@ -11,18 +11,17 @@
     <description>用户模块api</description>
     <parent>
         <groupId>com.xinaml</groupId>
-        <artifactId>common-api</artifactId>
+        <artifactId>common-parent</artifactId>
         <version>1.0</version>
-        <relativePath>../common/common-api/pom.xml</relativePath>
+        <relativePath>../common-parent/pom.xml</relativePath>
     </parent>
     <dependencies>
-
         <dependency>
             <groupId>com.xinaml</groupId>
             <artifactId>common-api</artifactId>
             <version>1.0</version>
+            <type>jar</type>
         </dependency>
-
     </dependencies>
 
 </project>

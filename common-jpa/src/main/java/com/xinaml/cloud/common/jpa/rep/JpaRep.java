@@ -1,4 +1,4 @@
-package  com.xinaml.cloud.common.jpa.rep;
+package com.xinaml.cloud.common.jpa.rep;
 
 
 import com.xinaml.cloud.common.api.dto.BaseDTO;

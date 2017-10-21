@@ -11,6 +11,6 @@ public class TestAct {
     private RestTemplate restTemplate;
     @GetMapping("/test")
     public String test(){
-        return restTemplate.getForObject("http://cloud-provider/search",String.class);
+        return restTemplate.getForObject("http://user-provider/search",String.class);
     }
 }

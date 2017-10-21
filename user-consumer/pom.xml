@@ -14,7 +14,7 @@
 		<groupId>com.xinaml</groupId>
 		<artifactId>common-parent</artifactId>
 		<version>1.0</version>
-		<relativePath>../common/common-parent/pom.xml</relativePath>
+		<relativePath>../common-parent/pom.xml</relativePath>
 	</parent>
 
 
@@ -24,6 +24,16 @@
 			<groupId>com.xinaml</groupId>
 			<artifactId>user-api</artifactId>
 			<version>1.0</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-data-jpa</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.hibernate.validator</groupId>
+					<artifactId>hibernate-validator</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>

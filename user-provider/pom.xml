@@ -13,9 +13,9 @@
 
 	<parent>
 		<groupId>com.xinaml</groupId>
-		<artifactId>user-api</artifactId>
+		<artifactId>common-parent</artifactId>
 		<version>1.0</version>
-		<relativePath>../user-api/pom.xml</relativePath>
+		<relativePath>../common-parent/pom.xml</relativePath>
 	</parent>
 
 	<dependencies>
@@ -24,11 +24,24 @@
 			<groupId>com.xinaml</groupId>
 			<artifactId>user-api</artifactId>
 			<version>1.0</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.hibernate.validator</groupId>
+					<artifactId>hibernate-validator</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
+
 		<dependency>
 			<groupId>com.xinaml</groupId>
 			<artifactId>common-jpa</artifactId>
 			<version>1.0</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.xinaml</groupId>
+					<artifactId>common-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
