@@ -19,10 +19,4 @@ public class TestAct {
     public String test() throws Exception {
         return JSON.toJSONString(userSer.findAll());
     }
-    @Value("${foo}")
-    String foo;
-    @RequestMapping(value = "/get/config")
-    public String hi(){
-        return foo;
-    }
 }

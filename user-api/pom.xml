@@ -8,14 +8,21 @@
     <version>1.0</version>
     <packaging>jar</packaging>
     <name>user-api</name>
-    <description>Demo project for Spring Boot</description>
-
+    <description>用户模块api</description>
+    <parent>
+        <groupId>com.xinaml</groupId>
+        <artifactId>common-api</artifactId>
+        <version>1.0</version>
+        <relativePath>../common/common-api/pom.xml</relativePath>
+    </parent>
     <dependencies>
+
         <dependency>
             <groupId>com.xinaml</groupId>
             <artifactId>common-api</artifactId>
             <version>1.0</version>
         </dependency>
+
     </dependencies>
 
 </project>
