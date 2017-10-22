@@ -1,63 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.xinaml</groupId>
-	<artifactId>user-provider</artifactId>
-	<version>1.0</version>
-	<packaging>jar</packaging>
+    <groupId>com.xinaml</groupId>
+    <artifactId>user-provider</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
 
-	<name>user-provider</name>
-	<description>用户模块提供者</description>
+    <name>user-provider</name>
+    <description>用户模块提供者</description>
 
-	<parent>
-		<groupId>com.xinaml</groupId>
-		<artifactId>common-parent</artifactId>
-		<version>1.0</version>
-		<relativePath>../common-parent/pom.xml</relativePath>
-	</parent>
+    <parent>
+        <groupId>com.xinaml</groupId>
+        <artifactId>common-parent</artifactId>
+        <version>1.0</version>
+        <relativePath>../common-parent/pom.xml</relativePath>
+    </parent>
 
-	<dependencies>
+    <dependencies>
 
-		<dependency>
-			<groupId>com.xinaml</groupId>
-			<artifactId>user-api</artifactId>
-			<version>1.0</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.hibernate.validator</groupId>
-					<artifactId>hibernate-validator</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
+        <dependency>
+            <groupId>com.xinaml</groupId>
+            <artifactId>user-api</artifactId>
+            <version>1.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.hibernate.validator</groupId>
+                    <artifactId>hibernate-validator</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
 
-		<dependency>
-			<groupId>com.xinaml</groupId>
-			<artifactId>common-jpa</artifactId>
-			<version>1.0</version>
-			<exclusions>
-				<exclusion>
-					<groupId>com.xinaml</groupId>
-					<artifactId>common-api</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>com.xinaml</groupId>
+            <artifactId>common-jpa</artifactId>
+            <version>1.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.xinaml</groupId>
+                    <artifactId>common-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
 
-	</dependencies>
+        <!--配置中心配置服务与注册中心联合使用-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+        <!--服务治理-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
+        <!--监控，可以对应用系统进行配置查看、相关功能统计等-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+    </dependencies>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>

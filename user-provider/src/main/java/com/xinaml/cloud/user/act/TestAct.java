@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class TestAct {
+
     @Autowired
     private UserSer userSer;
     @Value("${server.port}")
@@ -19,4 +20,18 @@ public class TestAct {
     public String test() throws Exception {
         return JSON.toJSONString(userSer.findAll());
     }
+
+    @Value("${foo}")
+    String foo;
+
+    /**
+     * 获取远程配置
+     *
+     * @return
+     */
+    @RequestMapping(value = "/hi")
+    public String hi() {
+        return foo;
+    }
+
 }
