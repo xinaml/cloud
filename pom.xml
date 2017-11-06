@@ -12,6 +12,7 @@
 
     <modules>
         <module>cloud-server</module>
+        <module>cloud-zuul</module>
         <module>config-server</module>
         <module>config-client</module>
 
